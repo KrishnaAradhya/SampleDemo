@@ -1,0 +1,33 @@
+{
+  "required" : true ,
+  "$schema" : "http://json-schema.org/draft-03/schema" ,
+  "type" : "object" ,
+  "properties" : {
+    "charges" : {
+      "type" : "array" ,
+      "required" : true ,
+      "items" : [
+        {
+          "type" : "object" ,
+          "properties" : {
+            "name" : {
+              "type" : "string" ,
+              "required" : true
+            } ,
+            "amount" : {
+              "type" : "string" ,
+              "required" : true
+            } ,
+            "type" : {
+              "type" : "string" ,
+              "required" : true
+            }
+          }
+        }
+      ]
+    } 
+  
+   
+  
+  }
+}

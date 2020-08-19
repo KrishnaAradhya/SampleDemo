@@ -1,0 +1,20 @@
+{
+  "request_id" : "b5512127-a134-4bf4-b1ba-fe9f48f56d9d" ,
+  "charges" : [
+    {
+      "name" : "Base Fare" ,
+      "amount" : "2.20" ,
+      "type" : "base_fare"
+    } , {
+      "name" : "Distance" ,
+      "amount" : "2.75" ,
+      "type" : "distance"
+    } , {
+      "name" : "Time" ,
+      "amount" : "3.57" ,
+      "type" : "time"
+    }
+  ] 
+  
+ 
+}

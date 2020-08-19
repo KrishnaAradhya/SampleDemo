@@ -1,0 +1,48 @@
+#%RAML 1.0
+title: Sample API
+version: 1.0.0
+baseUri: http://localhost:31020
+types:
+  promotionsResponse: !include promotionsResponse-schema.json
+  promotionRequest: !include promotionsRequest-schema.json
+  userRequest: !include userRequest-schema.json
+  userResponse: !include userResponse-schema.json
+/userInfo:
+  post:
+    body:
+      application/json:
+        type: userRequest
+        example: !include userRequest-example.json     
+    responses:
+      200:
+        body:
+          application/json:  
+            type: userResponse         
+            example: !include userResponse-example.json
+  get:
+    queryParameters:
+      name:
+        type: string
+        required: true
+      amount:
+        type: integer
+        required: true    
+    responses:
+      200:
+        body:
+          application/json:  
+            type: userResponse         
+            example: !include userResponse-example.json            
+/promotions:
+  post:
+    body:
+      application/json:
+        type: promotionRequest
+        example: !include promotionsRequest-example.json     
+    responses:
+      200:
+        body:
+          application/json:
+            type: promotionsResponse
+            example: !include promotionsResponse-example.json
+ 
