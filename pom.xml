@@ -31,7 +31,7 @@
       					 <target>sampleApp</target>
      					 <targetType>server</targetType>
      					 <username>KrishnaAradhya123</username>
-     					 <password>September123@0922</password>
+     					 <password>September@0922</password>
      					 <environment>Sandbox</environment>
     					  <properties>
      						   <env>QA</env>
