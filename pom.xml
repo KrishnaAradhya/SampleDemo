@@ -34,7 +34,7 @@
      					 <password>September@0922</password>
      					 <environment>Sandbox</environment>
     					  <properties>
-     						   <env>QA</env>
+     						   <env>${env}</env>
      					  </properties>
     			</armDeployment>
 				</configuration>
