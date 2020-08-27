@@ -12,7 +12,7 @@
         <RollingFile name="file" fileName="C:/Logs/apiSample.log" 
                  filePattern="${sys:mule.home}${sys:file.separator}logs${sys:file.separator}apisexample-%i.log">
             <PatternLayout pattern="%-5p %d [%t] [processor: %X{processorPath}; event: %X{correlationId}] %c: %m%n" />
-            <SizeBasedTriggeringPolicy size="12 KB" />
+            <SizeBasedTriggeringPolicy size="10 MB" />
             <DefaultRolloverStrategy max="10"/>
         </RollingFile>
     </Appenders>
