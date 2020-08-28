@@ -6,7 +6,7 @@
 	<flow name="schedulartestFlow" doc:id="75395909-2fcb-4ff2-b7cd-b672b83653db" >
 		<scheduler doc:name="Scheduler" doc:id="0fa54933-6dc1-4fea-bf9a-a2437f9d8a92" >
 			<scheduling-strategy >
-				<fixed-frequency frequency="1" timeUnit="MINUTES"/>
+				<fixed-frequency frequency="10" timeUnit="MINUTES"/>
 			</scheduling-strategy>
 		</scheduler>
 		<logger level="INFO" doc:name="Logger" doc:id="c747a7cb-9133-41fe-ab24-f16de5fcbe60" message="Schedular triggered"/>
