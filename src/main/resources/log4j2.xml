@@ -8,11 +8,17 @@
         Garbage Collector (-XX:+PrintGC). These will be append to the console, so you will 
         see them in the mule_ee.log file. -->
 
+
     <Appenders>
-        <RollingFile name="file" fileName="C:/Logs/apiSample.log" 
-                 filePattern="${sys:mule.home}${sys:file.separator}logs${sys:file.separator}apisexample-%i.log">
-            <PatternLayout pattern="%-5p %d [%t] [processor: %X{processorPath}; event: %X{correlationId}] %c: %m%n" />
-            <SizeBasedTriggeringPolicy size="10 MB" />
+     <http name="SplunkHTTP" url="https://localhost:8088" token="a06dff05-69b8-41d8-824b-a557d052354d"
+      disableCertificateValidation="true">                     
+ <PatternLayout pattern="[%d{MM-dd HH:mm:ss}] %-5p %c{1} [%t]: %m%n" charset="UTF-8"/>       
+  </http>
+ 
+      <RollingFile name="file" fileName="D:\Logs\Documents\${sys:pathLogFile}-apiexample.log" 
+                 filePattern="D:\Logs\Documents\${sys:pathLogFile}-%d{yyyy-MM-dd}-apiexample-%i.log">
+            <PatternLayout pattern="%d [%t] %-5p [processor: %X{processorPath}; event: %X{correlationId}] %c - %m%n" />
+            <SizeBasedTriggeringPolicy size="10 KB" />
             <DefaultRolloverStrategy max="10"/>
         </RollingFile>
     </Appenders>
@@ -27,7 +33,9 @@
         <AsyncLogger name="org.mule.runtime.core.internal.processor.LoggerMessageProcessor" level="INFO"/>
  
         <AsyncRoot level="INFO">
-            <AppenderRef ref="file" />
-        </AsyncRoot>
+            <AppenderRef ref="file" level="INFO"/> 
+            <AppenderRef ref="SplunkHTTP" level="INFO"/> 
+        </AsyncRoot> 
+      <!--   <AsyncRoot level="INFO">   <AppenderRef ref="Splunk" /></AsyncRoot>   -->
     </Loggers>
 </Configuration>
