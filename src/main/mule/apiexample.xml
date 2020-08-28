@@ -148,7 +148,7 @@ output application/json
 		<logger level="INFO" doc:name="Logger After promotions" doc:id="1061d8f6-f2a0-4a59-989b-4b24e6f9e55e" message="After promotions  #[payload]"/>
     </flow>
     <flow name="post:\userInfo:application\json:apiexample-config">
-		<logger level="INFO" doc:name="Logger - UserInfo" doc:id="5560bbf3-925c-4bb4-bbf2-ff87e5a104b0" message="Post userInfo == #[payload]"/>
+		<logger level="INFO" doc:name="Logger - UserInfo" doc:id="5560bbf3-925c-4bb4-bbf2-ff87e5a104b0" message="message.payloadAs(java.lang.String)"/>
 		<ee:transform doc:name="Transform Message" doc:id="aef90022-7d26-4ca1-9e83-4161aefd3aad" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
@@ -168,7 +168,7 @@ output application/json
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
-		<logger level="INFO" doc:name="Logger - After Transformation" doc:id="74887f6b-9019-4119-a92d-b88e5d6a27ea" message="Logger - After Transformation #[payload]"/>
+		<logger level="INFO" doc:name="Logger - After Transformation" doc:id="74887f6b-9019-4119-a92d-b88e5d6a27ea" message="message.payloadAs(java.lang.String)"/>
     </flow>
 	<flow name="getUserInfo" doc:id="a916df15-4c29-4086-9ec1-fa0693eb013e" >
 		<ee:transform doc:name="Transform Message" doc:id="3d4efa99-6e5f-477a-818a-69c0003e81f7" >
@@ -200,6 +200,6 @@ output application/xml
     }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
-		<logger level="INFO" doc:name="Logger Name And Amount" doc:id="8be82b9b-0594-4c07-93df-0859628de30d" message="After setting variable  #[payload]"/>
+		<logger level="INFO" doc:name="Logger Name And Amount" doc:id="8be82b9b-0594-4c07-93df-0859628de30d" message="message.payloadAs(java.lang.String)"/>
 	</flow>
 </mule>
