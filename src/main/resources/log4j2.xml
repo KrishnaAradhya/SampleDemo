@@ -12,7 +12,7 @@
     <Appenders>
      <http name="SplunkHTTP" url="https://localhost:8088" token="a06dff05-69b8-41d8-824b-a557d052354d"
       disableCertificateValidation="true">                     
- <PatternLayout pattern="[%d{MM-dd HH:mm:ss}] %-5p %c{1} [%t]: %m%n" charset="UTF-8"/>       
+ <PatternLayout pattern="%p: %m^{END}" charset="UTF-8"/>  
   </http>
  
       <RollingFile name="file" fileName="D:\Logs\Documents\${sys:pathLogFile}-apiexample.log" 
