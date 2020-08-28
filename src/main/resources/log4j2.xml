@@ -10,7 +10,7 @@
 
 
     <Appenders>
-     <http name="SplunkHTTP" url="https://localhost:8088" token="a06dff05-69b8-41d8-824b-a557d052354d"
+     <http name="SplunkHTTP" url="http://localhost:8088/services/collector/raw" token="a06dff05-69b8-41d8-824b-a557d052354d"
       disableCertificateValidation="true">                     
  <PatternLayout pattern="%p: %m^{END}" charset="UTF-8"/>  
   </http>
