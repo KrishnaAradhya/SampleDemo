@@ -10,10 +10,7 @@
 
 
     <Appenders>
-    <Http name="Splunk" url="http://localhost:8088/services/collector/raw">         
-        <Property name="Authorization" value="Splunk 826e603f-b5b4-4d7f-b1fa-4e5ad5161be8" />            
-         <PatternLayout pattern="[%d{MM-dd HH:mm:ss}] %-5p %c{1} [%t]: %m%n"/>       
-          </Http>
+    
  
       <RollingFile name="file" fileName="D:\Logs\Documents\${sys:pathLogFile}-apiexample.log" 
                  filePattern="D:\Logs\Documents\${sys:pathLogFile}-%d{yyyy-MM-dd}-apiexample-%i.log">
@@ -34,7 +31,7 @@
  
         <AsyncRoot level="INFO">
             <AppenderRef ref="file" level="INFO"/> 
-             <AppenderRef ref="Splunk" level="INFO"/> 
+           
         </AsyncRoot> 
       <!--   <AsyncRoot level="INFO">   <AppenderRef ref="Splunk" /></AsyncRoot>   -->
     </Loggers>
