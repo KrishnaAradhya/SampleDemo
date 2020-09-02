@@ -28,7 +28,7 @@
 					<armDeployment>
      					 <muleVersion>4.3.0</muleVersion>
      					 <uri>https://anypoint.mulesoft.com</uri>
-      					 <target>sampleApp</target>
+      					 <target>APIDemo</target>
      					 <targetType>server</targetType>
      					 <username>KrishnaAradhya123</username>
      					 <password>September@0922</password>
