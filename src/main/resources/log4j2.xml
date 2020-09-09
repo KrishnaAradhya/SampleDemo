@@ -20,8 +20,8 @@
          <PatternLayout pattern="[%d{MM-dd HH:mm:ss}] %-5p %c{1} [%t]: %m%n"/>       
           </Http>
  
-      <RollingFile name="file" fileName="C:\Logs\Documents\${sys:pathLogFile}-apiexample.log" 
-                 filePattern="C:\Logs\Documents\${sys:pathLogFile}-%d{yyyy-MM-dd}-apiexample-%i.log">
+      <RollingFile name="file" fileName="C:\Logs\Documents\${env}-apiexample.log" 
+                 filePattern="C:\Logs\Documents\${env}-%d{yyyy-MM-dd}-apiexample-%i.log">
             <PatternLayout pattern="%d [%t] %-5p [processor: %X{processorPath}; event: %X{correlationId}] %c - %m%n" />
             <SizeBasedTriggeringPolicy size="10 KB" />
             <DefaultRolloverStrategy max="10"/>
